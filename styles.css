@@ -1,0 +1,231 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Estilo dos contêineres */
+.content {
+  background-color: #1a1a1a;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+  margin: 30px auto; /* Espaçamento maior entre contêineres */
+  padding: 25px;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo dos títulos */
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Linha separadora */
+hr {
+  border: none;
+  border-top: 1px solid #4CAF50;
+  margin: 15px 0;
+}
+
+/* Texto do conteúdo */
+p {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+/* Estilo do rodapé */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .content {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividade para telas grandes (desktops) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    margin: 40px auto; /* Mais espaçamento em telas maiores */
+    padding: 30px;
+    max-width: 900px; /* Contêineres um pouco mais largos */
+  }
+}
+
+/* Botão Flutuante de Créditos */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  line-height: 55px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Contêiner de Créditos */
+.credits-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3);
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Botão de Fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Títulos e Links */
+.credits-container h2, .credits-container h3 {
+  color: #00ff00;
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.credits-container p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.credits-container a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+.credits-container a:hover {
+  text-decoration: underline;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Botão Flutuante de Créditos */
+.floating-button {
+  position: fixed;
+  bottom: 80px; /* Ajusta a posição acima do fim da tela */
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  display: flex; /* Alinha o conteúdo com flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 255, 0, 0.5);
+}
